@@ -31,7 +31,7 @@
         "z": "1f36db45.8970fd",
         "wires": [
             [
-                "148b5f8e.e2e74"
+                "b68cfa87.e19018"
             ]
         ]
     },
@@ -124,8 +124,8 @@
         "name": "",
         "firebaseurl": "https://<your-firebase>.firebaseio.com",
         "child": "payload",
-        "x": 408,
-        "y": 371,
+        "x": 407,
+        "y": 383,
         "z": "1f36db45.8970fd",
         "wires": [
             [
@@ -148,7 +148,7 @@
         "z": "1f36db45.8970fd",
         "wires": [
             [
-                "148b5f8e.e2e74"
+                "b68cfa87.e19018"
             ]
         ]
     },
@@ -167,7 +167,7 @@
         "z": "1f36db45.8970fd",
         "wires": [
             [
-                "148b5f8e.e2e74"
+                "b68cfa87.e19018"
             ]
         ]
     },
@@ -220,24 +220,6 @@
         "y": 79,
         "z": "1f36db45.8970fd",
         "wires": []
-    },
-    {
-        "id": "148b5f8e.e2e74",
-        "type": "change",
-        "action": "replace",
-        "property": "path",
-        "from": "",
-        "to": "msg.payload",
-        "reg": false,
-        "name": "path = payload",
-        "x": 401,
-        "y": 420,
-        "z": "1f36db45.8970fd",
-        "wires": [
-            [
-                "b68cfa87.e19018"
-            ]
-        ]
     },
     {
         "id": "d0db2837.45ecb8",
@@ -307,8 +289,8 @@
         "active": true,
         "console": "true",
         "complete": "false",
-        "x": 597,
-        "y": 386,
+        "x": 593,
+        "y": 383,
         "z": "1f36db45.8970fd",
         "wires": []
     },
