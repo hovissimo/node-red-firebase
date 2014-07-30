@@ -1,0 +1,388 @@
+[
+    {
+        "type": "tab",
+        "id": "1f36db45.8970fd",
+        "label": "Sheet 1"
+    },
+    {
+        "id": "749f6691.924328",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "true",
+        "complete": "false",
+        "x": 594,
+        "y": 127,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "fde8e5f1.8c8628",
+        "type": "inject",
+        "name": "payload = \"test/c\"",
+        "topic": "",
+        "payload": "test/c",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 183,
+        "y": 420,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "148b5f8e.e2e74"
+            ]
+        ]
+    },
+    {
+        "id": "3eefed48.23a2da",
+        "type": "firebase set",
+        "name": "",
+        "firebaseurl": "https://<your-firebase>.firebaseio.com",
+        "child": "path",
+        "x": 604,
+        "y": 538,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "34efe431.fb74e4",
+        "type": "inject",
+        "name": "payload = \"purple\"",
+        "topic": "",
+        "payload": "purple",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 182,
+        "y": 538,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "c7202b08.700908",
+                "d0db2837.45ecb8"
+            ]
+        ]
+    },
+    {
+        "id": "c7202b08.700908",
+        "type": "change",
+        "action": "replace",
+        "property": "path",
+        "from": "",
+        "to": "test/b",
+        "reg": false,
+        "name": "path = \"test/b\"",
+        "x": 410,
+        "y": 538,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "3eefed48.23a2da"
+            ]
+        ]
+    },
+    {
+        "id": "1b8fd18e.58b086",
+        "type": "inject",
+        "name": "payload = \"green\"",
+        "topic": "",
+        "payload": "green",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 182,
+        "y": 576,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "c7202b08.700908",
+                "d0db2837.45ecb8"
+            ]
+        ]
+    },
+    {
+        "id": "fd74ce2a.a64e38",
+        "type": "firebase watch",
+        "name": "",
+        "firebaseurl": "https://<your-firebase>.firebaseio.com/test",
+        "x": 202,
+        "y": 126,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "749f6691.924328"
+            ]
+        ]
+    },
+    {
+        "id": "b68cfa87.e19018",
+        "type": "firebase query",
+        "name": "",
+        "firebaseurl": "https://<your-firebase>.firebaseio.com",
+        "child": "payload",
+        "x": 408,
+        "y": 371,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "a16f63f1.d6567"
+            ]
+        ]
+    },
+    {
+        "id": "49ab659.7e2c51c",
+        "type": "inject",
+        "name": "payload = \"test/a\"",
+        "topic": "",
+        "payload": "test/a",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 182,
+        "y": 347,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "148b5f8e.e2e74"
+            ]
+        ]
+    },
+    {
+        "id": "19d1ce53.20def2",
+        "type": "inject",
+        "name": "payload = \"test/b\"",
+        "topic": "",
+        "payload": "test/b",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 181,
+        "y": 383,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "148b5f8e.e2e74"
+            ]
+        ]
+    },
+    {
+        "id": "9c09a489.38404",
+        "type": "inject",
+        "name": "payload = \"orange\"",
+        "topic": "",
+        "payload": "orange",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 178,
+        "y": 613,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "c7202b08.700908",
+                "d0db2837.45ecb8"
+            ]
+        ]
+    },
+    {
+        "id": "4911f59f.26f224",
+        "type": "inject",
+        "name": "payload = \"blue\"",
+        "topic": "",
+        "payload": "blue",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 186,
+        "y": 650,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "c7202b08.700908",
+                "d0db2837.45ecb8"
+            ]
+        ]
+    },
+    {
+        "id": "e8254f4e.b7cad8",
+        "type": "comment",
+        "name": "This Watch node generates messages when any value under \"/test\" changes.",
+        "info": "",
+        "x": 402,
+        "y": 79,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "148b5f8e.e2e74",
+        "type": "change",
+        "action": "replace",
+        "property": "path",
+        "from": "",
+        "to": "msg.payload",
+        "reg": false,
+        "name": "path = payload",
+        "x": 401,
+        "y": 420,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "b68cfa87.e19018"
+            ]
+        ]
+    },
+    {
+        "id": "d0db2837.45ecb8",
+        "type": "firebase add",
+        "name": "",
+        "firebaseurl": "https://<your-firebase>.firebaseio.com/a-list-of-stuff",
+        "child": "",
+        "x": 605,
+        "y": 650,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "664659bf.edf99",
+        "type": "firebase set",
+        "name": "",
+        "firebaseurl": "https://<your-firebase>.firebaseio.com/a-list-of-stuff",
+        "child": "",
+        "x": 605,
+        "y": 753,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "e3dcc10b.78fbb",
+        "type": "inject",
+        "name": "empty payload",
+        "topic": "",
+        "payload": "",
+        "payloadType": "none",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 193,
+        "y": 754,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "664659bf.edf99"
+            ]
+        ]
+    },
+    {
+        "id": "2952bca.27e3744",
+        "type": "comment",
+        "name": "This flow resets the list by setting a null value to \"/a-list-of-stuff\".",
+        "info": "",
+        "x": 393,
+        "y": 717,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "ec49e636.c22b48",
+        "type": "comment",
+        "name": "This flow will set a value at \"/test/b\" and append a value to \"/a-list-of-stuff\"",
+        "info": "",
+        "x": 403,
+        "y": 495,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "a16f63f1.d6567",
+        "type": "debug",
+        "name": "",
+        "active": true,
+        "console": "true",
+        "complete": "false",
+        "x": 597,
+        "y": 386,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "bd5bc8bb.7aea6",
+        "type": "comment",
+        "name": "This flow retreives values from specific fields under \"/test\"",
+        "info": "",
+        "x": 397,
+        "y": 304,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "c8db60f6.8a2d38",
+        "type": "comment",
+        "name": "This flow will set some data at \"/test\"",
+        "info": "",
+        "x": 398,
+        "y": 184,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "3bcb7cb8.305a5c",
+        "type": "firebase set",
+        "name": "",
+        "firebaseurl": "https://<your-firebase>.firebaseio.com/test",
+        "child": "",
+        "x": 602,
+        "y": 235,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    },
+    {
+        "id": "36bba2a1.1dc5ae",
+        "type": "inject",
+        "name": "",
+        "topic": "",
+        "payload": "{\"a\":\"one\", \"b\":\"two\", \"c\":\"three\"}",
+        "payloadType": "string",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 179,
+        "y": 235,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "5309dd4b.a5a0e4"
+            ]
+        ]
+    },
+    {
+        "id": "5309dd4b.a5a0e4",
+        "type": "json",
+        "name": "",
+        "x": 413,
+        "y": 235,
+        "z": "1f36db45.8970fd",
+        "wires": [
+            [
+                "3bcb7cb8.305a5c"
+            ]
+        ]
+    },
+    {
+        "id": "c651cd50.6b275",
+        "type": "comment",
+        "name": "DOUBLE CLICK ME FIRST!",
+        "info": "Firebase is an online, real-time, RESTful data store you\ncan use for free.  These Firebase nodes are designed to make\nworking with your Firebase in Node-RED easy and simple.\n\nTo use these demo flows, you'll want to registor for your \nown Firebase and then edit all of the Firebase nodes below \nto add your Firebase address.\n\nPlease read more at Firebase.com!\n\nYou can use the flows that follow to experiment with your \nFirebase and see how the various Firebase nodes work!\n\nThis will make the most sense if you open another browser \nwindow at https://<your-firebase>.firebaseio.com and watch \nthe data change live.",
+        "x": 396,
+        "y": 40,
+        "z": "1f36db45.8970fd",
+        "wires": []
+    }
+]
