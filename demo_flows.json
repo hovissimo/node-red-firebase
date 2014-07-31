@@ -361,7 +361,7 @@
         "id": "c651cd50.6b275",
         "type": "comment",
         "name": "DOUBLE CLICK ME FIRST!",
-        "info": "Firebase is an online, real-time, RESTful data store you\ncan use for free.  These Firebase nodes are designed to make\nworking with your Firebase in Node-RED easy and simple.\n\nTo use these demo flows, you'll want to registor for your \nown Firebase and then edit all of the Firebase nodes below \nto add your Firebase address.\n\nPlease read more at Firebase.com!\n\nYou can use the flows that follow to experiment with your \nFirebase and see how the various Firebase nodes work!\n\nThis will make the most sense if you open another browser \nwindow at https://<your-firebase>.firebaseio.com and watch \nthe data change live.",
+        "info": "Firebase is an online, real-time, RESTful data store you\ncan use for free.  These Firebase nodes are designed to \nmake working with your Firebase in Node-RED easy and\nsimple.\n\nTo use these demo flows, you'll want to register for your \nown Firebase and then edit all of the Firebase nodes below \nto add your Firebase address.\n\nPlease read more at Firebase.com!\n\nYou can use the flows that follow to experiment with your \nFirebase and see how the various Firebase nodes work!\n\nThis will make the most sense if you open another browser \nwindow at https://<your-firebase>.firebaseio.com and watch \nthe data change live.",
         "x": 396,
         "y": 40,
         "z": "1f36db45.8970fd",
