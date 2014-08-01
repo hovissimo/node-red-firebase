@@ -7,6 +7,7 @@ Installing node-red-firebase
 ----------------------------
 I don't want to add this to npm quite yet.  In the meantime, from the node-red/ directory you can
 
+    npm install firebase
     cd nodes/
     git clone https://github.com/hovissimo/node-red-firebase
 
