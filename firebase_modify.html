@@ -1,3 +1,30 @@
+<script type="text/x-red" data-template-name="firebase modify">
+    <div class="form-row">
+        <label for="node-input-firebaseurl"><i class="icon-tasks"></i> Firebase</label>
+        <input type="text" id="node-input-firebaseurl" placeholder="https://<your-firebase>.firebasio.com/<path>/<to>/<your>/<data>">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-child"><i class="icon-tasks"></i> Path</label>
+        msg.<input type="text" id="node-input-child" style="width: 63%;" placeholder="path"/>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-method"><i class="icon-tasks"></i> Method</label>
+        <select id="node-input-method" type="text">
+            <option value="set" default>SET</option>
+            <option value="push">PUSH</option>
+            <option value="update">UPDATE</option>
+            <option value="remove">REMOVE</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
 <script type="text/x-red" data-help-name="firebase modify">
    <p>Modify/Add data to Firebase</p>
    <p>This node can be backed by a few different Firebase API methods:</p>
@@ -27,7 +54,6 @@
         See: <a href="https://www.firebase.com/docs/web/api/firebase/remove.html">https://www.firebase.com/docs/web/api/firebase/remove.html</a>
       </li>
     </ul>
-      
    <p>Optional: <strong>Path</strong> is the name of a message property to be appended to the Firebase Url.  This can be used to modify your Firebase dynamically.</p>
    <p><strong><em>WARNING:</em></strong><br />
    It is possible to cause an endless loop if an upstream node watches the data set here.<br />
