@@ -1,0 +1,66 @@
+<script type="text/x-red" data-help-name="firebase modify">
+   <p>Modify/Add data to Firebase</p>
+   <p>This node can be backed by a few different Firebase API methods:</p>
+    <ul>
+      <li>
+        <strong>SET:</strong>
+        <em>The value of <strong>msg.payload</strong> can be an object, array, string, number, boolean, or null.</em><br />
+        Contents of <strong>msg.payload</strong> is written to the Firebase reference,
+        replacing whatever may already be there.  If there is nothing there, a new record is made.</br>
+        See: <a href="https://www.firebase.com/docs/web/api/firebase/set.html">https://www.firebase.com/docs/web/api/firebase/set.html</a>
+      </li>
+      <li>
+        <strong>UPDATE:</strong>
+        <em>The value of <strong>msg.payload</strong> must be an object.</em><br/>
+        For each key in the object, the Firebase reference will have the corresponding key set to the value in <strong>msg.payload</strong>, in effect updating the Firebase reference with the included keys and ignoring any keys that are missing from <strong>msg.payload</strong>.<br/>
+        See: <a href="https://www.firebase.com/docs/web/api/firebase/update.html">https://www.firebase.com/docs/web/api/firebase/update.html</a>
+      </li>
+      <li>
+        <strong>PUSH:</strong>
+        <em>The value of <strong>msg.payload</strong> can be an object, array, string, number, boolean, or null.</em><br />
+        The value of <strong>msg.payload</strong> is added to the Firebase reference as a new child reference with a unique key. (The key is arbitrary) <br />
+        See: <a href="https://www.firebase.com/docs/web/api/firebase/push.html">https://www.firebase.com/docs/web/api/firebase/push.html</a>
+      </li>
+      <li>
+        <strong>REMOVE:</strong>
+        The data at the Firebase reference and all child data is removed immediately (no undo!).  This is equivalent to using <strong>SET</strong> with <strong>msg.payload</strong> equal to null.<br/>
+        See: <a href="https://www.firebase.com/docs/web/api/firebase/remove.html">https://www.firebase.com/docs/web/api/firebase/remove.html</a>
+      </li>
+    </ul>
+      
+   <p>Optional: <strong>Path</strong> is the name of a message property to be appended to the Firebase Url.  This can be used to modify your Firebase dynamically.</p>
+   <p><strong><em>WARNING:</em></strong><br />
+   It is possible to cause an endless loop if an upstream node watches the data set here.<br />
+   (This node writes to "/foo", an upstream node watching "/foo" or / will generate a message leading this node to write to /foo.)
+   </p>
+   <p>If in doubt, add a Delay node.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('firebase modify',{
+        category: 'firebase',      // the palette category
+        defaults: {             // defines the editable properties of the node
+            name: {value:""},   //  along with default values.
+            firebaseurl: {value:"", required:true},
+            child: {value:"", required:false},
+            method: {value:"set"},
+        },
+        color: "#B24317",
+        inputs:1,               // set the number of inputs - only 0 or 1
+        outputs:0,              // set the number of outputs - 0 to n
+        // set the icon (held in icons dir below where you save the node)
+        icon: "firebase.png",     // saved in  icons/myicon.png
+        label: function() {     // sets the default label contents
+            return this.name||"Modify (" + this.method + ")";
+        },
+        labelStyle: function() { // sets the class to apply to the label
+            return this.name?"node_label_italic":"";
+        },
+        oneditsave: function() {
+          // Trim the trailing slash on the url, if there is one
+          var firebaseurl = $("#node-input-firebaseurl").val();
+          var match = firebaseurl.match("/$");
+          if (match) { $("#node-input-firebaseurl").val(firebaseurl.substr(0, match.index)); }
+        },
+    });
+</script>

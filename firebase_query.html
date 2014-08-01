@@ -1,0 +1,47 @@
+<script type="text/x-red" data-template-name="firebase query">
+    <div class="form-row">
+        <label for="node-input-firebaseurl"><i class="icon-tasks"></i> Firebase</label>
+        <input type="text" id="node-input-firebaseurl" placeholder="https://<your-firebase>.firebasio.com/<path>/<to>/<your>/<data>">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-child"><i class="icon-tasks"></i> Path</label>
+        msg.<input type="text" id="node-input-child" style="width: 63%;" placeholder="path"/>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="firebase query">
+   <p>Get data from Firebase once</p>
+   <p>Optional: <strong>Path</strong> is the name of a message property to be appended to the Firebase Url.  This can be used to query your Firebase dynamically.</p>
+   <p>Outputs:<br/>
+    <strong>msg.href:</strong> The URL where we found the payload.<br/>
+    <strong>msg.payload:</strong> The data we found.  The type corresponds to whatever is at that location<br/>
+   </p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('firebase query',{
+        category: 'firebase',      // the palette category
+        defaults: {             // defines the editable properties of the node
+            name: {value:""},   //  along with default values.
+            firebaseurl: {value:"", required:true},
+            child: {value:"", required:false},
+        },
+        color: "#B24317",
+        inputs:1,               // set the number of inputs - only 0 or 1
+        outputs:1,              // set the number of outputs - 0 to n
+        // set the icon (held in icons dir below where you save the node)
+        icon: "firebase.png",     // saved in  icons/myicon.png
+        label: function() {     // sets the default label contents
+            return this.name||"Query";
+        },
+        labelStyle: function() { // sets the class to apply to the label
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>
