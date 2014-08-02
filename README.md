@@ -5,7 +5,6 @@ This allows you to automate Firebase data manipulation or generate custom events
 
 Installing node-red-firebase
 ----------------------------
-I don't want to add this to npm quite yet.  In the meantime, from the node-red/ directory you can
 
     npm install firebase
     cd nodes/
