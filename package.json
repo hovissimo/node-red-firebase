@@ -1,0 +1,34 @@
+{
+  "name": "node-red-firebase",
+  "version": "0.1.0",
+  "description": "Check it out! Now you can access your Firebase data with Node-RED! This allows you to automate Firebase data manipulation or generate custom events based on what's going on with your data store.",
+  "main": "firebase_query.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hovissimo/node-red-firebase.git"
+  },
+  "keywords": [
+    "node-red",
+    "node",
+    "firebase",
+    "real",
+    "time",
+    "socket"
+  ],
+  "node-red": {
+    "nodes": {
+      "firebase_modify": "firebase_modify.js",
+      "firebase_query": "firebase_query.js",
+      "firebase_watch": "firebase_watch.js"
+    }
+  },
+  "author": "Hovis <hovis@bunkercode.com>",
+	"contributors": [
+		"André Lademann <vergissberlin@googlemail.com>"
+	],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hovissimo/node-red-firebase/issues"
+  },
+  "homepage": "https://github.com/hovissimo/node-red-firebase"
+}
