@@ -1,0 +1,37 @@
+<script type="text/x-red" data-template-name="firebase server">
+    <div class="form-row">
+        <label for="node-input-url"><i class="fa fa-bookmark"></i> Url</label>
+        <input type="text" id="node-input-url" placeholder="https://<your-firebase>.firebasio.com">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-email"><i class="fa fa-envelope"></i>Email</label>
+        <input class="input-append-left" type="email" id="node-config-input-email">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-password"><i class="fa fa-lock"></i>Password</label>
+        <input class="input-append-left" type="password" id="node-config-input-password">
+    </div>
+    <div class="form-tips">
+        <p>Enter your firebase url <code>https://&#x3C;your-firebase&#x3E;.firebasio.com</code> and credentials.</p>
+    </div>
+
+</script>
+
+<script type="text/javascript">
+    (function () {
+        RED.nodes.registerType('firebase server', {
+            category: 'config',
+            defaults: { },
+            credentials: {
+                url: {type: "text", required: true},
+                email: {type: "text", required: true},
+                password: {type: "password", required: true}
+            },
+            label: function () {
+                return this.email ? "Firebase " + this.email : "Firebase";
+            },
+            exportable: false
+        });
+    })();
+
+</script>

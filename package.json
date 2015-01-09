@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/hovissimo/node-red-firebase.git"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [
     "node-red",
     "node",
@@ -23,12 +26,16 @@
     }
   },
   "author": "Hovis <hovis@bunkercode.com>",
-	"contributors": [
-		"André Lademann <vergissberlin@googlemail.com>"
-	],
+  "contributors": [
+    "André Lademann <vergissberlin@googlemail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hovissimo/node-red-firebase/issues"
   },
-  "homepage": "https://github.com/hovissimo/node-red-firebase"
+  "homepage": "https://github.com/hovissimo/node-red-firebase",
+  "dependencies": {
+    "firebase": "^2.1.0",
+    "firebase-login": "^0.1.2"
+  }
 }

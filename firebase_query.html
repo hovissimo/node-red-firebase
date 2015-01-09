@@ -1,5 +1,10 @@
 <script type="text/x-red" data-template-name="firebase query">
     <div class="form-row">
+        <label for="node-input-firebaseserver"><i class="fa fa-bookmark"></i> Firebase</label>
+        <input type="text" id="node-input-firebaseserver">
+    </div>
+
+    <div class="form-row">
         <label for="node-input-firebaseurl"><i class="icon-tasks"></i> Firebase</label>
         <input type="text" id="node-input-firebaseurl" placeholder="https://<your-firebase>.firebasio.com/<path>/<to>/<your>/<data>">
     </div>
@@ -29,6 +34,7 @@
         category: 'firebase',      // the palette category
         defaults: {             // defines the editable properties of the node
             name: {value:""},   //  along with default values.
+            firebaseserver:  {type:"firebase server",required:true},
             firebaseurl: {value:"", required:true},
             child: {value:"", required:false},
         },
