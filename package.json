@@ -36,6 +36,7 @@
   "homepage": "https://github.com/hovissimo/node-red-firebase",
   "dependencies": {
     "firebase": "^2.1.0",
-    "firebase-login": "^0.1.2"
+    "firebase-login-custom": "0.0.4",
+    "firebase-login-email": "^0.0.4"
   }
 }

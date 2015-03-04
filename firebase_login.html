@@ -1,0 +1,113 @@
+<script type="text/x-red" data-template-name="firebase login">
+
+    <!-- Select type -->
+    <div class="form-row">
+        <label for="node-config-input-appid"><i class="fa fa-fire"></i>Firebase</label>
+        https:// <input class="input-append-left" type="text" id="node-config-input-appid" placeholder="your-firebase-appid" style="width: 36%">.firebaseio.com
+    </div>
+
+
+    <!-- Select type -->
+    <div class="form-row">
+        <label for="login-type-select"><i class="fa fa-shield"></i> Type</label>
+        <select id="login-type-select">
+            <option value="custom">Custom with secret</option>
+            <option value="email">Email</option>
+        </select>
+        <input type="hidden" id="node-config-input-type">
+    </div>
+
+
+    <!-- Custom login -->
+    <div class="form-row login-row login-row-custom hidden" id="login-row-custom">
+        <label for="node-config-input-uid"><i class="fa fa-user"></i> User id</label>
+        <input class="input-append-left" type="text" id="node-config-input-uid" placeholder="your user id">
+    </div>
+    <div class="form-row login-row login-row-custom hidden" id="login-row-custom">
+        <label for="node-config-input-secret"><i class="fa fa-credit-card"></i> Secret</label>
+        <input class="input-append-left" type="password" id="node-config-input-secret" placeholder="your secret">
+    </div>
+
+
+    <!-- Email login -->
+    <div class="form-row login-row login-row-email hidden" id="login-row-email">
+        <label for="node-config-input-email"><i class="fa fa-envelope"></i> Email</label>
+        <input class="input-append-left" type="email" id="node-config-input-email" placeholder="your@email.com">
+    </div>
+    <div class="form-row login-row login-row-email hidden" id="login-row-email-password">
+        <label for="node-config-input-password"><i class="fa fa-lock"></i> Password</label>
+        <input class="input-append-left" type="password" id="node-config-input-password">
+    </div>
+
+
+    <!-- Tips -->
+    <div class="form-tips">
+        <p>Enter your firebase id <code>https://&#x3C;your-firebase&#x3E;.firebasio.com</code> and credentials.</p>
+    </div>
+
+</script>
+
+<script type="text/javascript">
+    (function () {
+
+        RED.nodes.registerType('firebase login', {
+            category: 'config',
+
+            defaults: {
+                appid: {value: '', required: false},
+                value: {value: '', required: false},
+                uid: {value: '', required: false},
+                secret: {value: '', required: false},
+                email: {value: '', required: false},
+                password: {value: '', required: false}
+            },
+
+            credentials: {
+                appid: {type: 'text', required: true},
+                type: {type: 'text', required: false},
+                uid: {type: 'text', required: true},
+                secret: {type: 'password', required: true},
+                email: {type: 'text', required: true},
+                password: {type: 'password', required: true}
+            },
+
+            label: function () {
+                return typeof this.appid ? 'Firebase ' + this.appid : 'Firebase ' + this.email;
+            },
+
+            labelStyle: function () {
+                return this.name ? 'node_label_italic' : '';
+            },
+
+            oneditprepare: function () {
+
+                var
+                    $nodeConfigInputType = $('#node-config-input-type'),
+                    type = $nodeConfigInputType.val(),
+                    $loginTypeSelect = $('#login-type-select');
+
+                $loginTypeSelect.change(function () {
+                    var id = $(this).find('option:selected').val();
+                    $('.login-row').hide();
+                    $('.login-row-' + id).show();
+                    $nodeConfigInputType.val(id);
+                });
+
+                $('.login-row').hide();
+
+                // select current type
+                if (type) {
+                    $loginTypeSelect.val(
+                        $nodeConfigInputType.val()
+                    );
+                    $('.login-row-' + type).show();
+                } else {
+                    // set default
+                    $('.login-row-custom').show();
+                    $nodeConfigInputType.val('custom');
+                }
+            },
+            exportable: true
+        });
+    })();
+</script>
