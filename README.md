@@ -24,4 +24,3 @@ It's easiest to see what's going on if you have the live Firebase view open in a
 Have questions?  Found a bug?
 -----------------------------
 Please submit issues to the Github issue tracker
-
