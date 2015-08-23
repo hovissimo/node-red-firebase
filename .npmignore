@@ -3,8 +3,10 @@
 .DS_Store
 .editorconfig
 .git
+.gitignore
 .hg
 .lock-wscript
 .wafpickle-*
 CVS
 npm-debug.log
+/docs
