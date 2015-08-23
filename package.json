@@ -1,5 +1,5 @@
 {
-  "name": "node-red-firebase",
+  "name": "node-red-contrib-firebase-api",
   "version": "0.1.0",
   "description": "Check it out! Now you can access your Firebase data with Node-RED! This allows you to automate Firebase data manipulation or generate custom events based on what's going on with your data store.",
   "main": "firebase_query.js",
