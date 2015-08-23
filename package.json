@@ -5,7 +5,7 @@
   "main": "firebase_query.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hovissimo/node-red-firebase.git"
+    "url": "https://github.com/vergissberlin/node-red-contrib-firebase.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,15 +25,16 @@
       "firebase_watch": "firebase_watch.js"
     }
   },
-  "author": "Hovis <hovis@bunkercode.com>",
+  "author": "André Lademann <vergissberlin@googlemail.com>",
   "contributors": [
-    "André Lademann <vergissberlin@googlemail.com>"
+    "André Lademann <vergissberlin@googlemail.com>",
+    "Hovis <hovis@bunkercode.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hovissimo/node-red-firebase/issues"
+    "url": "https://github.com/vergissberlin/node-red-contrib-firebase/issues"
   },
-  "homepage": "https://github.com/hovissimo/node-red-firebase",
+  "homepage": "https://github.com/vergissberlin/node-red-contrib-firebase",
   "dependencies": {
     "firebase": "^2.2.9",
     "firebase-login-custom": "0.0.4",

@@ -1,6 +1,5 @@
 # Firebase nodes for Node-RED
 
-
 [![Dependency Status](https://gemnasium.com/vergissberlin/node-red-contrib-firebase.svg)](https://gemnasium.com/vergissberlin/node-red-contrib-firebase) [![Build Status](https://api.travis-ci.org/vergissberlin/node-red-contrib-firebase.png?branch=master)](https://travis-ci.org/vergissberlin/node-red-contrib-firebase) [![Inline docs](http://inch-ci.org/github/vergissberlin/node-red-contrib-firebase.svg?branch=master)](http://inch-ci.org/github/vergissberlin/node-red-contrib-firebase) [![Issues](http://img.shields.io/github/issues/vergissberlin/node-red-contrib-firebase.svg)](https://github.com/vergissberlin/node-red-contrib-firebase/issues "GitHub ticket system") [![npm version](https://img.shields.io/npm/v/node-red-contrib-keymetrics.png)](https://npmjs.org/package/node-red-contrib-firebase "View this project on npm") [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/vergissberlin/node-red-contrib-firebase?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ---
@@ -40,7 +39,6 @@ This allows you to automate Firebase data manipulation or generate custom events
 
 Open your *Node-RED* Frontend and you will find the new node under the group *output*. **Happy wiring!**
 
-
 ## Demo
 Check out the demo flows to see the Firebase nodes in action, you can start Node-RED with
 
@@ -48,21 +46,21 @@ Check out the demo flows to see the Firebase nodes in action, you can start Node
 
 It's easiest to see what's going on if you have the live Firebase view open in another browser window while you interact with the flows.
 
-
 ## Bugs, questions, contribute
 - **Found a bug?** Please submit issues to the [Github issue tracker](https://github.com/vergissberlin/node-red-contrib-firebase/issues).
 - **Have questions?** Please use [Gitter](https://gitter.im/vergissberlin/node-red-contrib-firebase?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) to get in contact with me
 - **Wanna contribute?** Please make a [fork](https://github.com/vergissberlin/node-red-contrib-firebase#fork-destination-box) an send me an pull request.
 
- 
+
+## Thanks
+Special thanks to
+- Dave Conway-Jones and Nick O'Leary from IBM, founders of Node-RED.
+- [hvissimo](https://github.com/hovissimo) for base of the Firebase node.
 
 
 ---
+
 **Glossary <a id="glossary"></a>**
 
 1. *[PM2](https://github.com/Unitech/pm2) Firebase is a cloud services provider and backend as a service company based in San Francisco, California. The company makes a number of products for software developers building mobile or web applications.*
-
-
-
-
 

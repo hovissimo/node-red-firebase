@@ -9,4 +9,5 @@
 .wafpickle-*
 CVS
 npm-debug.log
+travis.yml
 /docs
