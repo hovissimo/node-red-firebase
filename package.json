@@ -5,7 +5,7 @@
   "main": "firebase_query.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vergissberlin/node-red-contrib-firebase.git"
+    "url": "https://github.com/vergissberlin/node-red-contrib-firebase-api.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,9 +32,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vergissberlin/node-red-contrib-firebase/issues"
+    "url": "https://github.com/vergissberlin/node-red-contrib-firebase-api/issues"
   },
-  "homepage": "https://github.com/vergissberlin/node-red-contrib-firebase",
+  "homepage": "https://github.com/vergissberlin/node-red-contrib-firebase-api",
   "dependencies": {
     "firebase": "^2.2.9",
     "firebase-login-custom": "0.0.4",
