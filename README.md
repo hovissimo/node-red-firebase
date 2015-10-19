@@ -1,6 +1,6 @@
 # Firebase nodes for Node-RED
 
-[![Dependency Status](https://gemnasium.com/vergissberlin/node-red-contrib-firebase-api.svg)](https://gemnasium.com/vergissberlin/node-red-contrib-firebase-api) [![Build Status](https://api.travis-ci.org/vergissberlin/node-red-contrib-firebase-api.png?branch=master)](https://travis-ci.org/vergissberlin/node-red-contrib-firebase-api) [![Inline docs](http://inch-ci.org/github/vergissberlin/node-red-contrib-firebase-api.svg?branch=master)](http://inch-ci.org/github/vergissberlin/node-red-contrib-firebase-api) [![Issues](http://img.shields.io/github/issues/vergissberlin/node-red-contrib-firebase-api.svg)](https://github.com/vergissberlin/node-red-contrib-firebase-api/issues "GitHub ticket system") [![npm version](https://img.shields.io/npm/v/node-red-contrib-keymetrics.png)](https://npmjs.org/package/node-red-contrib-firebase-api "View this project on npm") [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vergissberlin/node-red-contrib-firebase-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Dependency Status](https://gemnasium.com/vergissberlin/node-red-firebase.svg)](https://gemnasium.com/vergissberlin/node-red-firebase) [![Build Status](https://api.travis-ci.org/vergissberlin/node-red-firebase.png?branch=master)](https://travis-ci.org/vergissberlin/node-red-firebase) [![Inline docs](http://inch-ci.org/github/vergissberlin/node-red-firebase.svg?branch=master)](http://inch-ci.org/github/vergissberlin/node-red-firebase) [![Issues](http://img.shields.io/github/issues/vergissberlin/node-red-firebase.svg)](https://github.com/vergissberlin/node-red-firebase/issues "GitHub ticket system") [![npm version](https://img.shields.io/npm/v/node-red-contrib-keymetrics.png)](https://npmjs.org/package/node-red-firebase "View this project on npm") [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vergissberlin/node-red-firebase?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ---
 
@@ -34,7 +34,7 @@ This allows you to automate Firebase data manipulation or generate custom events
 ## Installation
 
 	cd ~/.node-red
-	npm install node-red-contrib-firebase-api
+	npm install node-red-firebase
 	node-red -v
 
 Open your *Node-RED* Frontend and you will find the new node under the group *output*. **Happy wiring!**
@@ -42,14 +42,14 @@ Open your *Node-RED* Frontend and you will find the new node under the group *ou
 ## Demo
 Check out the demo flows to see the Firebase nodes in action, you can start Node-RED with
 
-    node-red node_modules/node-red-contrib-firebase-api/demo_flows.json
+    node-red node_modules/node-red-firebase/demo_flows.json
 
 It's easiest to see what's going on if you have the live Firebase view open in another browser window while you interact with the flows.
 
 ## Bugs, questions, contribute
-- **Found a bug?** Please submit issues to the [Github issue tracker](https://github.com/vergissberlin/node-red-contrib-firebase-api/issues).
-- **Have questions?** Please use [Gitter](https://gitter.im/vergissberlin/node-red-contrib-firebase-api?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) to get in contact with me
-- **Wanna contribute?** Please make a [fork](https://github.com/vergissberlin/node-red-contrib-firebase-api#fork-destination-box) an send me an pull request.
+- **Found a bug?** Please submit issues to the [Github issue tracker](https://github.com/vergissberlin/node-red-firebase/issues).
+- **Have questions?** Please use [Gitter](https://gitter.im/vergissberlin/node-red-firebase?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) to get in contact with me
+- **Wanna contribute?** Please make a [fork](https://github.com/vergissberlin/node-red-firebase#fork-destination-box) an send me an pull request.
 
 
 ## Thanks

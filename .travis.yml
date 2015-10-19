@@ -3,4 +3,4 @@ node_js:
   - "0.12"
 before_script:
   - "sh -e /etc/init.d/xvfb start"
-  - npm install node-red-contrib-firebase-api
+  - npm install node-red-firebase
