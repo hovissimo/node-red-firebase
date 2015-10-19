@@ -1,0 +1,44 @@
+{
+  "name": "node-red-firebase",
+  "version": "0.1.2",
+  "description": "Check it out! Now you can access your Firebase data with Node-RED! This allows you to automate Firebase data manipulation or generate custom events based on what's going on with your data store.",
+  "main": "firebase_query.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vergissberlin/node-red-firebase.git"
+  },
+  "scripts": {
+    "test": "npm install"
+  },
+  "keywords": [
+    "node-red",
+    "node",
+    "firebase",
+    "real",
+    "time",
+    "socket"
+  ],
+  "node-red": {
+    "nodes": {
+      "firebase_modify": "firebase_modify.js",
+      "firebase_query": "firebase_query.js",
+      "firebase_watch": "firebase_watch.js"
+    }
+  },
+  "author": "André Lademann <vergissberlin@googlemail.com>",
+  "contributors": [
+    "André Lademann <vergissberlin@googlemail.com>",
+    "Hovis <hovis@bunkercode.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vergissberlin/node-red-firebase/issues"
+  },
+  "homepage": "https://github.com/vergissberlin/node-red-firebase",
+  "dependencies": {
+    "firebase": "^2.2.9",
+    "firebase-login": "^1.0.0",
+    "firebase-login-custom": "0.0.4",
+    "firebase-login-email": "^0.0.4"
+  }
+}

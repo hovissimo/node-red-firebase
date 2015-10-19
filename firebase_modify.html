@@ -1,7 +1,12 @@
 <script type="text/x-red" data-template-name="firebase modify">
     <div class="form-row">
-        <label for="node-input-firebaseurl"><i class="icon-tasks"></i> Firebase</label>
-        <input type="text" id="node-input-firebaseurl" placeholder="https://<your-firebase>.firebasio.com/<path>/<to>/<your>/<data>">
+        <label for="node-input-firebaselogin"><i class="fa fa-bookmark"></i> Firebase</label>
+        <input type="text" id="node-input-firebaselogin">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-firebasepath"><i class="fa fa-sellsy"></i> Firepath</label>
+        https://<em id="fireid">your-id</em>.firebaseio.com/<input class="input-append-left" type="text" id="node-input-firebasepath" placeholder="your-firebase-path" style="width: 28%">
     </div>
 
     <div class="form-row">
@@ -63,30 +68,34 @@
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('firebase modify',{
-        category: 'firebase',      // the palette category
-        defaults: {             // defines the editable properties of the node
-            name: {value:""},   //  along with default values.
-            firebaseurl: {value:"", required:true},
-            child: {value:"", required:false},
-            method: {value:"set"},
+    RED.nodes.registerType('firebase modify', {
+        category: 'firebase',       // the palette category
+        defaults: {                 // defines the editable properties of the node
+            name: {value: ''},      //  along with default values.
+            firebaselogin: {type: 'firebase login', required: true},
+            firebasepath: {value: '', required: true},
+            child: {value: '', required: false},
+            method: {value: 'set'}
         },
-        color: "#B24317",
-        inputs:1,               // set the number of inputs - only 0 or 1
-        outputs:0,              // set the number of outputs - 0 to n
-        // set the icon (held in icons dir below where you save the node)
-        icon: "firebase.png",     // saved in  icons/myicon.png
-        label: function() {     // sets the default label contents
-            return this.name||"Modify (" + this.method + ")";
+        color: '#B24317',
+        icon: 'firebase.png',       // saved in  icons/myicon.png
+        inputs: 1,                  // set the number of inputs - only 0 or 1
+        outputs: 0,                 // set the number of outputs - 0 to n
+
+        label: function () {        // sets the default label contents
+            return this.name || 'Modify (' + this.method + ')';
         },
-        labelStyle: function() { // sets the class to apply to the label
-            return this.name?"node_label_italic":"";
+        labelStyle: function () {   // sets the class to apply to the label
+            return this.name ? "node_label_italic" : "";
         },
-        oneditsave: function() {
-          // Trim the trailing slash on the url, if there is one
-          var firebaseurl = $("#node-input-firebaseurl").val();
-          var match = firebaseurl.match("/$");
-          if (match) { $("#node-input-firebaseurl").val(firebaseurl.substr(0, match.index)); }
-        },
+        oneditsave: function () {
+            // Trim the trailing slash on the url, if there is one
+            var $firebasePath =$('#node-input-firebasepath'),
+                firebasepath = $firebasePath.val();
+                match = firebasepath.match('/$');
+            if (match) {
+                $firebasePath.val(firebasepath.substr(0, match.index));
+            }
+        }
     });
 </script>

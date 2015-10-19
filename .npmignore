@@ -1,0 +1,13 @@
+.*.swp
+._*
+.DS_Store
+.editorconfig
+.git
+.gitignore
+.hg
+.lock-wscript
+.wafpickle-*
+CVS
+npm-debug.log
+travis.yml
+/docs
