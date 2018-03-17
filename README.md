@@ -3,6 +3,8 @@
 Check it out! Now you can access your Firebase data with Node-RED!
 This allows you to automate Firebase data manipulation or generate custom events based on what's going on with your data store.
 
+NOTE:  See the network https://github.com/hovissimo/node-red-firebase/network for other people who have made neat things based on this project since I stopped.
+
 Installing node-red-firebase
 ----------------------------
 
